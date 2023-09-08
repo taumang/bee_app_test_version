@@ -1,3 +1,6 @@
+//just to remove some errors on the primary keys in the Models
+global using System.ComponentModel.DataAnnotations;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
