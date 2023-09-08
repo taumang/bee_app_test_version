@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace bee_app.Controllers
 {
     [ApiController]
+    /* used the 'Microsoft.AspNetCore.Components' to remove error on the route, it is regarded as an ambiguous reference */
     [Microsoft.AspNetCore.Components.Route("api/[controller]")]
+    
     public class InspectionController : ControllerBase
     {
         private static Inspection new_inspection = new Inspection();

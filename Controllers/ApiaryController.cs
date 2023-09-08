@@ -9,13 +9,20 @@ using Microsoft.AspNetCore.Mvc;
 namespace bee_app.Controllers
 {
     [ApiController]
+    /* used the 'Microsoft.AspNetCore.Components' to remove error on the route, it is regarded as an ambiguous reference */
     [Microsoft.AspNetCore.Components.Route("api/[controller]")]
     public class ApiaryController : ControllerBase
     {
-        private static Apiary new_apiary = new Apiary();// Calling the Apiary Class in Models folder
+        // Calling the Apiary Class in Models folder
+        private static List<Apiary> new_apiary = new List<Apiary>{
+            new Apiary(),
+            new Apiary {Name = "Aphrodite"},
+            new Apiary {Location = "Greece"}
+        };
+
 
         [HttpGet("GetApiary")]
-        public ActionResult<Apiary> Get()// Naming convention of Get is recognised 
+        public ActionResult<List<Apiary>> Get()// Naming convention of Get is recognised 
         {
             return Ok(new_apiary);
         }
