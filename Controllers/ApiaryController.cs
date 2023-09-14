@@ -22,7 +22,7 @@ namespace bee_app.Controllers
 
 
         [HttpGet("GetApiary")]
-        public ActionResult<List<Apiary>> Get()// Naming convention of Get is recognised 
+        public ActionResult<List<Apiary>> Get()// Naming convention of Get is recognized 
         {
             return Ok(new_apiary);
         }
