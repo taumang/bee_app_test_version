@@ -12,21 +12,22 @@ namespace bee_app.Models
         public int BeeColony_Id { get; set; }        
         public int Apiary_Id { get; set; }
 
-         public Apiary Apiary { get; set; }
-
+         public Apiary? Apiary { get; set; }
+        
+        public int queenAge;
         public int QueenAge { 
             get
             {
-            return QueenAge;
+            return queenAge;
             }
              set
              {
             // value does not go over 6
             if (value <= 6)
-                    QueenAge = value;
+                    queenAge = value;
             else
                 // if 6 is reach or goes over 6, set it to the maximum allowed value (6)
-                QueenAge = 6;
+                queenAge = 6;
              }
             }
         public BeeTypeClass Class_Bee { get; set; } = BeeTypeClass.African_Killer_Bee;
