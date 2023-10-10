@@ -19,12 +19,17 @@ namespace bee_app_test_version.Controllers
         };
        }
        [HttpPost]
-       public ActionResult<BeeColony> numBeeColony(int Age_of_Queen,int Population, int BeeTypeClass, int HiveActivityClass){
+       public ActionResult<BeeColony> NumBeeColony(
+        int Age_of_Queen,
+        int Population, 
+        int Bee_Type_Class, 
+        int Hive_Activity_Class){
+        
         return new BeeColony{
-            QueenAge = Age_of_Queen,
-            BeePopulation = Population,
-            Class_Bee = (BeeTypeClass)BeeTypeClass,
-            Class_Hive = (HiveActivityClass)HiveActivityClass
+            Queen_Age = Age_of_Queen,
+            Bee_Population = Population,
+            Class_Bee = (BeeTypeClass)Bee_Type_Class,
+            Class_Hive = (HiveActivityClass)Hive_Activity_Class
             
         };
        }
